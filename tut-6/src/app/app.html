@@ -1,0 +1,13 @@
+<h1>main page</h1>
+
+<app-product></app-product>
+
+<div [ngStyle]="{'height':'500px','background-color':'red'}"></div>
+
+@defer(on viewport){
+  <app-recomandation></app-recomandation>
+}@placeholder {
+  <p>content are here</p>
+}
+
+<router-outlet />
