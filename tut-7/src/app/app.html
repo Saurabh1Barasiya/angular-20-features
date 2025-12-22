@@ -1,0 +1,9 @@
+<h1>main page</h1>
+
+@defer(on timer(5s)){
+  <app-prouct></app-prouct>
+}@placeholder {
+  <p>product automatically loaded after 5 secound.</p>
+}
+
+<router-outlet />
