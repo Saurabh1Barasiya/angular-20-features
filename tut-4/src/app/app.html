@@ -1,0 +1,20 @@
+<h1>well come to my website</h1>
+
+@defer(on interaction){
+  <app-show-comments></app-show-comments>
+}@placeholder {
+  <p>click here to show the comments</p>
+}
+
+<hr>
+
+<button #bth>show comments</button>
+@defer(on interaction(bth)){
+  <app-show-comments></app-show-comments>
+}
+
+<!-- isme ya to placeholder likho ya target do. -->
+
+<router-outlet />
+
+
