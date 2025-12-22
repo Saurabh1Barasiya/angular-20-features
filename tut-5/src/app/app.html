@@ -1,0 +1,17 @@
+<h1>hi we learn about lazy component</h1>
+
+
+@defer(on hover){
+  <app-details></app-details>
+}@placeholder {
+  <p [ngStyle]="{'color':'red'}">hover me to see the content</p>
+}
+
+<hr>
+
+<button #btn>hover me to show the details</button>
+@defer(on hover(btn)){
+  <app-display-details></app-display-details>
+}
+
+<router-outlet />
