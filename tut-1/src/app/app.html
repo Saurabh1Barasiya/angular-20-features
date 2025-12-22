@@ -1,0 +1,52 @@
+@if(isLoggedIN){
+  <h1 [ngStyle]="{'color':'green'}">hi saurabh you are login </h1>
+}@else{
+  <h1 [ngStyle]="{'color':'red'}">you are not login </h1>
+}
+
+<button (click)="toggle()">togle</button>
+<hr>
+
+<input type="text" [(ngModel)]="age" placeholder="please enter age here">
+<h3>you enter {{age}}</h3>
+
+@if(age<10){
+  <h3 [ngStyle]="{'color':'cyan'}">you are child</h3>
+}@else if(age < 18){
+   <h3 [ngStyle]="{'color':'green'}">you are adult</h3>
+}@else if(age < 30){
+   <h3 [ngStyle]="{'color':'blue'}">Go for marraige</h3>
+}@else {
+  <h3 [ngStyle]="{'color':'red'}">Now you are older</h3>
+}
+
+<hr>
+
+<div class="adjust">
+  <h3>select the fruit</h3>
+
+@switch(fruit){
+  @case ('papaya'){
+    <p [ngStyle]="{'color':'cyan','font-size':'2rem'}">you have selected papaya</p>
+  }
+  @case ('orange'){
+     <p [ngStyle]="{'color':'blue','font-size':'2rem'}">you have selected orange</p>
+  }
+  @case ('mango'){
+    <p [ngStyle]="{'color':'yellow','font-size':'2rem'}">you have selected mango</p>
+  }
+  @case ('graps'){
+    <p [ngStyle]="{'color':'green','font-size':'2rem'}">you have selected graps</p>
+  }
+  @default {
+    <p [ngStyle]="{'color':'red','font-size':'2rem'}" >No fruit is selected.</p>
+  }
+}
+</div>
+
+
+<button (click)="setFruit('papaya')">papaya</button>
+<button (click)="setFruit('orange')">orange</button>
+<button (click)="setFruit('mango')">mango</button>
+<button (click)="setFruit('graps')">graps</button>
+<router-outlet />
