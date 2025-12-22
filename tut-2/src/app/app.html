@@ -1,0 +1,38 @@
+@for(user of users;track user.id;let i = $index){
+  <p [ngStyle]="{'color':$even ? 'green' : 'blue'}">{{i+1}} -- {{user.name}} -- {{user.role}}</p>
+}
+
+<hr>
+
+@for(user of users;track user.id;let i = $index){
+  @if($odd){
+    <p [ngStyle]="{'color':'red'}">odd index  {{user.name}} -- {{user.role}}</p>
+  }
+}
+
+<hr>
+
+@for(user of users;track user.id;let i = $index){
+  @if($first){
+    <p [ngStyle]="{'color':'red'}">first index  {{user.name}} -- {{user.role}}</p>
+  }
+}
+
+<hr>
+
+@for(user of users;track user.id;let i = $index){
+  @if($last){
+    <p [ngStyle]="{'color':'red'}">last index  {{user.name}} -- {{user.role}}</p>
+  }
+}
+
+<hr>
+
+
+@for(user of users;track user.id;let i = $index){
+  @if($last){
+    <p>totel itsms {{$count}}</p>
+  }
+}
+
+<router-outlet />
