@@ -1,0 +1,4 @@
+@for(user of users;track user.id){
+  <h3 [class.even]="$even" [class.odd]="$odd"> {{user.name}} -- {{user.role}}</h3>
+}
+<router-outlet />
