@@ -1,0 +1,9 @@
+<ul>
+  <li>{{user.name}}</li>
+  <li>{{user.age}}</li>
+</ul>
+
+<button (click)="increaseAge()">inc age +</button>
+
+<app-child-a [childUser]="user"></app-child-a>
+<router-outlet />
