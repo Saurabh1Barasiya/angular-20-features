@@ -15,4 +15,15 @@
     <p class="price">5000</p>
 </app-shose>
 </div>
+
+
+<hr>
+
+<h3>update number</h3> {{num}}
+<button (click)="inc()">+</button>
+
+<app-comp-b>
+    <p id="parentdata">parent data {{num}}</p>
+</app-comp-b>
+
 <router-outlet />
