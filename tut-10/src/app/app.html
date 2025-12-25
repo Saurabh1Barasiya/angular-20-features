@@ -1,0 +1,13 @@
+<div class="container">
+  <p>Parent component </p>
+
+  <input type="number" [(ngModel)]="num">
+  <p>value of num {{num}}</p>
+
+
+  <div class="">
+    <app-child [parentNum]="num"></app-child>
+  </div>
+
+</div>
+<router-outlet />
