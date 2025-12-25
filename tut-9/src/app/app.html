@@ -1,0 +1,21 @@
+<div class="container">
+  <div class="left">
+    <h1>Parent Component</h1>
+    @if(childUser){
+      <ul>
+        <li>Child name {{childUser.name}}</li>
+        <li>Child age {{childUser.age}}</li>
+        <li>Child address {{childUser.address}}</li>
+      </ul>
+    }
+
+    @if(childMessage){
+      <p>{{childMessage}}</p>
+    }
+  </div>
+  <div class="right">
+    <app-child [childUser]="parentData" (newUser)="recivedUser($event)"></app-child>
+  </div>
+</div>
+
+<router-outlet />

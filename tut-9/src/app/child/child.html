@@ -1,0 +1,10 @@
+<h1>Child Component </h1>
+@if(childUser){
+    <ul>
+        <li>Parent User name {{childUser.name}} </li>
+        <li>Parent User age {{childUser.age}} </li>
+        <li>Parent User address {{childUser.address}} </li>
+    </ul>
+
+    <button (click)="sendUserToParent()">send new user to parent</button>
+}
