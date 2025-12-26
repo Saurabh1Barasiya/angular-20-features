@@ -1,0 +1,25 @@
+<h3>Todo App</h3>
+
+<input [(ngModel)]="newTodo" placeholder="Enter todo" />
+<button (click)="addTodo()">Add</button>
+
+<ul>
+  @for (todo of todos; track todo.id) {
+    <li>
+      @if (editingId !== todo.id) {
+        <!-- Normal view -->
+        {{ todo.title }}
+        <button (click)="startEdit(todo)">Edit</button>
+        <button (click)="deleteTodo(todo.id)">Delete</button>
+      } @else {
+        <!-- Edit view -->
+        <input [(ngModel)]="editedTitle" />
+        <button (click)="saveEdit(todo)">Save</button>
+        <button (click)="cancelEdit()">Cancel</button>
+      }
+    </li>
+  }
+</ul>
+
+
+<router-outlet />
