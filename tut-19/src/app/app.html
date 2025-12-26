@@ -1,0 +1,10 @@
+@for(user of filteredData;track user.id){
+  <p>id {{user.id}} -- name {{user.name}} -- {{user.email}} -- {{user.age}}</p>
+}
+
+
+<button (click)="pre()" [disabled]="page == 1">previous</button>
+  {{page}}
+<button (click)="nex()" [disabled]="page > totelPage">next</button>
+
+<router-outlet />
