@@ -1,0 +1,14 @@
+<input type="text" [(ngModel)]="todoContent" placeholder="type you task">
+<button (click)="addTodo()">set todo</button>
+
+@for(item of todo;track item.id){
+  <ul>
+    <li>{{item.id}}</li>
+    <li>{{item.title}}</li>
+    <li>{{item.completed}}</li>
+    <button (click)="deleteTodos(item.id)">delete</button>
+  </ul>
+}
+
+
+<router-outlet />
