@@ -1,0 +1,15 @@
+<input type="text" (input)="sugesstion(inp.value)" #inp>
+<span>Totel length {{totelItem}}</span>
+<button (click)="sortByPriceAscending()">sort by price asending</button>
+<button (click)="sortByPriceDscending()">sort by price desending</button>
+@for(item of filteredData;track item.id){
+  <ul>
+    <li>{{item.id}}</li>
+    <li>{{item.name}}</li>
+    <li>{{item.price}}</li>
+    <li>{{item.category}}</li>
+  </ul>
+}@empty {
+  <p>Data Not Found</p>
+}
+<router-outlet />
