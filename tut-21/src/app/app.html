@@ -1,0 +1,15 @@
+<form [formGroup]="todoForm" (ngSubmit)="addTodo()">
+  <input type="text" formControlName="todoControl" placeholder="enter todos here...">
+  <button>add todo</button>
+</form>
+
+@for(todo of todos;track todo.id){
+  <ul>
+    <li>{{todo.id}}</li>
+    <li>{{todo.title}}</li>
+    <li>{{todo.completed}}</li>
+    <button (click)="removeTodo(todo.id)">delete</button>
+  </ul>
+}
+
+<router-outlet />
