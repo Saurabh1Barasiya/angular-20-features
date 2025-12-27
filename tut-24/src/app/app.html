@@ -1,0 +1,14 @@
+<form [formGroup]="todoForm" (ngSubmit)="addTodo()">
+  <input type="text" formControlName="titleControl">
+  <button>{{ editIndex=== null ? 'Add TODO' : 'Save TODO' }}</button>
+</form>
+
+@for(todo of todosList;track $index){
+  <ul>
+    <li>{{todo.title}}</li>
+    <button (click)="removeTodo($index)">delete</button>
+    <button (click)="editTodo($index)">Edit</button>
+  </ul>
+}
+
+<router-outlet />
