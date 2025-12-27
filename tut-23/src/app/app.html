@@ -1,0 +1,23 @@
+<input type="text" [(ngModel)]="todoTitle" [placeholder]="placeholder">
+<button (click)="addTodo()">add todo</button>
+
+@for(todo of todosList;track todo.id){
+
+  @if(editID !== todo.id){
+    <div class="">
+      <span>{{todo.title}}</span>
+      <button (click)="deleteTodo(todo.id)">remove</button>
+      <button (click)="startEdit(todo)">edit</button>
+    </div>
+  }@else {
+     <div class="">
+      <input type="text" [(ngModel)]="editTitle" placeholder="start edit">
+      <button (click)="save(todo)">save</button>
+      <button (click)="cancel()">cancel</button>
+     </div>
+  }
+  
+}
+
+
+<router-outlet />
