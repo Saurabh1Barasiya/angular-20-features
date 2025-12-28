@@ -1,0 +1,46 @@
+<h1>name with uppercase pipe <span [ngStyle]="{'color':'red'}">{{'saurabh'|uppercase}}</span> </h1>
+<h1>name with lowercase pipe  <span [ngStyle]="{'color':'red'}">{{'SAURABH'|lowercase}}</span> </h1>
+
+<h1>TODAY date <span [ngStyle]="{'color':'red'}">{{today}}</span> </h1>
+<h1>Today exact date <span [ngStyle]="{'color':'red'}">{{today|date}}</span>  </h1>
+<h1>Today day <span [ngStyle]="{'color':'red'}">{{today|date:'dd'}}</span>  </h1>
+<h1>Today month<span [ngStyle]="{'color':'red'}">{{today|date:'MM'}}</span>  </h1>
+<h1>Today fulldate<span [ngStyle]="{'color':'red'}">{{today|date:'fullDate'}}</span>  </h1>
+
+<hr>
+
+<h1>Currency Pipe</h1>
+{{25000 | currency}} <br>
+{{25000 | currency:'INR'}}
+
+<hr>
+
+<h1>Number Decimal PIPE</h1>
+
+{{3.124523|number:'1.2-3'}}
+
+<h1>PERCENT PIPE</h1>
+{{0.8563|percent}}
+
+<hr>
+
+<h1>Json pipe</h1>
+
+{{user|json}}
+
+<hr>
+
+<h1>titlecase</h1>
+{{'angular developer at coforge'|titlecase}}
+
+<hr>
+
+<h1>keyvalue pipe</h1>
+
+<!-- @for(item of user ; track item.key){
+  {{item.key}} -- {{item.value}}
+} -->
+@for(item of user|keyvalue ; track item.key){
+  {{item.key}} -- {{item.value}}
+}
+<router-outlet />
