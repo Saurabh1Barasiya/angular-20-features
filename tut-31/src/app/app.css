@@ -1,0 +1,18 @@
+.add-backgrond-color-and-radius{
+    background-color: brown;
+    border-radius: 20px;
+    padding: 1rem;
+    color: aliceblue;
+}
+
+.parent{
+    background-color: red;
+    border:2px solid rebeccapurple;
+    padding: 1rem;
+    color: aliceblue;
+    font-size: 2rem;
+}
+
+.parent li{
+    list-style-type: none;
+}

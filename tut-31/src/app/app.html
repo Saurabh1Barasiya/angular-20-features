@@ -1,0 +1,24 @@
+<h1 #heading>Hi my name is saurabh</h1>
+<button (click)="addRedColor()">Add red color</button>
+<button (click)="addGreenBackGround()">Add green background</button>
+<button (click)="addPadding()">Add green background</button>
+
+<hr>
+
+<h3 #headinngthree>hi plase add class to me</h3>
+<button (click)="addClass()">add class</button>
+<button (click)="deleteClass()">add class</button>
+
+<hr>
+
+<p #para>please apply toggling class on me</p>
+<button (click)="toggle()">toggle</button>
+<hr>
+
+<div class="parent" #parent>
+  <li>hi kese ho</li>
+</div>
+
+<button (click)="childAddKarDo()">Add child</button>
+<button (click)="childRemoveKarDo()">Remove Child</button>
+<router-outlet />
