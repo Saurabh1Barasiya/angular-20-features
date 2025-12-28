@@ -1,0 +1,15 @@
+<h3>Infinite Scroll Demo</h3>
+
+<ul>
+  @for (item of items; track item) {
+    <li>Item {{ item }}</li>
+  }
+</ul>
+
+@if (loading) {
+  <p>Loading...</p>
+}
+
+
+
+<router-outlet />
