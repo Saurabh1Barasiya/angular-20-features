@@ -67,6 +67,4 @@ export class App implements OnInit {
     this.display();
   }
 
-
- 
 }
