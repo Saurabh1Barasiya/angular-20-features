@@ -1,0 +1,10 @@
+.box{
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 1.5rem;
+    padding: 0 4rem;
+}
+
+.box li{
+    list-style-type: none;
+}

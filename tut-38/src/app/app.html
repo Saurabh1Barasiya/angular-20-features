@@ -1,0 +1,17 @@
+@for(user of paginatedData;track user.id){
+  <ul class="box">
+    <li>{{user.id}}</li>
+    <li>{{user.name}}</li>
+    <li>{{user.email}}</li>
+    <li>{{user.age}}</li>
+  </ul>
+}
+
+<button (click)="previousData()" [disabled]="page === 1">prev</button> 
+{{page}} 
+<button (click)="nextData()" [disabled]="page === totalPage">next</button>
+
+@for(btn of pagesArray;track $index){
+  <button (click)="goTopage(btn)">{{btn}}</button>
+}
+<router-outlet />
