@@ -1,0 +1,13 @@
+@for(user of users;track user.id){
+  <ul>
+    <li>{{user.firstName}}</li>
+    <li>{{user.lastName}}</li>
+    <li>{{user.maidenName}}</li>
+    <li>{{user.age}}</li>
+  </ul>
+}
+<div class="end" #end>
+  <p>loading....</p>
+</div>
+
+<router-outlet />
