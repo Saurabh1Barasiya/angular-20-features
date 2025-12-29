@@ -1,0 +1,15 @@
+.container {
+  height: 100vh;
+  overflow: auto;
+}
+
+.item {
+  padding: 16px;
+  border-bottom: 1px solid #ccc;
+}
+
+.endingpoint {
+  text-align: center;
+  padding: 20px;
+  color: gray;
+}
